@@ -1,0 +1,8 @@
+
+RESUMO DE KPIs - OTIMIZACAO LOGISTICA
+======================================
+Distancia media cliente-DC:  596 km -> 236 km   (-60%)
+Frete medio estimado:        R$ 19.94 -> R$ 16.35   (-18%)
+% pedidos atrasados (atual):  6.6%
+Reducao em roteirizacao (VRP, simulacao 18 entregas/3 veiculos): 37.7%
+Previsao de demanda (proximo mes, nacional): 7200 pedidos (MAPE validacao: 3.3%)
