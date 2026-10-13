@@ -1,14 +1,14 @@
-# 📦 Otimização Logística de Marketplace
+ Otimização Logística de Marketplace
 
 Projeto de portfólio de ponta a ponta: dados brutos → EDA → modelos de otimização → dashboard interativo.
 
 **Dataset:** [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) — 99.441 pedidos reais e anonimizados de um marketplace brasileiro (2016-2018), incluindo geolocalização de clientes e vendedores.
 
-## 🎯 Problema de negócio
+ Problema de negócio
 
 O Olist opera como marketplace: ~60% dos vendedores estão concentrados em São Paulo, mas os clientes estão espalhados por todo o Brasil. Isso gera distâncias longas de entrega, fretes altos e atrasos concentrados nas regiões Norte/Nordeste (até 3x acima da média nacional). Este projeto simula uma rede logística com múltiplos centros de distribuição regionais para reduzir distância, custo de frete e atraso.
 
-## 🗂️ Estrutura do projeto
+Estrutura do projeto
 
 ```
 marketplace_logistics/
@@ -27,7 +27,7 @@ marketplace_logistics/
 └── requirements.txt
 ```
 
-## 🚀 Como rodar
+Como rodar
 
 ```bash
 pip install -r requirements.txt
@@ -48,7 +48,7 @@ streamlit run streamlit_app.py
 
 O `outputs/dashboard.html` pode ser aberto diretamente no navegador, sem precisar rodar nada (standalone).
 
-## 📊 Principais resultados
+Principais resultados
 
 | Métrica | Cenário Atual | Cenário Otimizado (5 DCs) | Ganho |
 |---|---|---|---|
@@ -63,7 +63,7 @@ O `outputs/dashboard.html` pode ser aberto diretamente no navegador, sem precisa
 - Do tempo total de entrega, 8,7 dias (73%) são gastos no transporte físico, contra 2,8 dias de processamento interno — mostrando que o ganho está mais em rede logística do que em processos internos.
 - Simulação de 5 centros de distribuição regionais (via K-Means ponderado por volume de pedidos) reduziria a distância média percorrida em 60%.
 
-## 🛠️ Stack técnica
+Stack técnica
 
 - **Dados:** Pandas, NumPy
 - **Geolocalização:** Haversine (distância real entre coordenadas)
@@ -71,7 +71,7 @@ O `outputs/dashboard.html` pode ser aberto diretamente no navegador, sem precisa
 - **Otimização:** K-Means ponderado (alocação de centros de distribuição), Google OR-Tools (roteirização / VRP)
 - **Visualização:** Matplotlib, Plotly, Streamlit
 
-## 📌 Próximos passos (extensões possíveis)
+Próximos passos (extensões possíveis)
 
 - Incluir custo fixo de abertura de cada DC na função objetivo (hoje otimiza só distância)
 - VRP com janelas de tempo (time windows) e múltiplos depósitos simultâneos
